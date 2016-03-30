@@ -1,0 +1,45 @@
+/************/
+/*! Layout  */
+/************/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  margin: 2em auto;
+  padding: 0 1.5em;
+  max-width: 71.25em;
+}
+
+.container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/********************************************/
+/*! Magnific Popup, Simple fade transition  */
+/********************************************/
+.mfp-fade.mfp-bg,
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.95;
+}
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+
+.mfp-fade.mfp-bg.mfp-removing,
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
